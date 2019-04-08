@@ -6,15 +6,20 @@ import CompanyMember from "../components/CompanyMember"
 import SEO from "../components/seo"
 import GenauHeaderImage from "../images/genau-header-image.png"
 import HeroImage from "../components/HeroImage"
+import TrilogyTile from "../components/TrilogyTile"
 import { Instagram, Twitter, BookOpen } from "react-feather"
+import { graphql } from "gatsby"
 
 import members from "../data/members"
 
 import "./index.scss"
 
-const IndexPage = () => (
+const iconSize = 40
+
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`genau`, `dance`, `company`]} />
+    {JSON.stringify}
     <HeroImage src={GenauHeaderImage} alt="header image" />
     <div className="strapline">
       <p className="strapline__text">
@@ -24,37 +29,36 @@ const IndexPage = () => (
       <div className="strapline__after" />
     </div>
     <section className="trilogy">
-      <div className="trilogy__show" id="ebb-and-flood">
-        <h2 className="trilogy__show__title">Ebb & Flood</h2>
-        <p className="trilogy__show__date">2018</p>
-      </div>
-      <div className="trilogy__show" id="ebb-and-flood">
-        <h2 className="trilogy__show__title">Kreislauf</h2>
-        <p className="trilogy__show__date">2019</p>
-      </div>
-      <div className="trilogy__show" id="ebb-and-flood">
-        <h2 className="trilogy__show__title">Hoffnung</h2>
-        <p className="trilogy__show__date">2020</p>
-      </div>
+      <TrilogyTile
+        name="Ebb & Flood"
+        date="2017"
+        imageUrl={data.ebbImage.edges[0].node.publicURL}
+      />
+      <TrilogyTile
+        name="Kreislauf"
+        date="2019"
+        imageUrl={data.kreislaufImage.edges[0].node.publicURL}
+      />
+      <TrilogyTile name="Hoffnung" date="2020" imageUrl={data} />
     </section>
     <section className="social-media">
       <h2 className="section-header">Stay in touch</h2>
       <div className="social-media__platforms">
         <SocialMediaPlatform
           name="Twitter"
-          icon={<Twitter />}
+          icon={<Twitter size={iconSize} />}
           handle="@genaudanceco"
           url="https://www.twitter.com/genaudanceco"
         />
         <SocialMediaPlatform
           name="Instagram"
-          icon={<Instagram />}
+          icon={<Instagram size={iconSize} />}
           handle="@genaudanceco"
           url="https://www.instagram.com/genaudanceco"
         />
         <SocialMediaPlatform
           name="Blog"
-          icon={<BookOpen />}
+          icon={<BookOpen size={iconSize} />}
           handle="Visit Blog"
           url="/blog"
         />
@@ -75,5 +79,33 @@ const IndexPage = () => (
     </section>
   </Layout>
 )
+
+export const ebbImage = graphql`
+  {
+    ebbImage: allFile(
+      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "ebb" } }
+    ) {
+      edges {
+        node {
+          name
+          publicURL
+        }
+      }
+    }
+    kreislaufImage: allFile(
+      filter: {
+        relativeDirectory: { eq: "trilogy" }
+        name: { eq: "kreislauf" }
+      }
+    ) {
+      edges {
+        node {
+          name
+          publicURL
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

@@ -1,0 +1,40 @@
+@import "../styles/styles";
+
+.trilogy__show {
+    font-family: "Taviraj", serif;
+    color: white;
+
+    @media (min-width: 0) {
+        height: 100%;
+    }
+
+    @media (min-width: $bp-sm) {
+        height: 190px;
+    }
+
+    @media (min-width: $bp-md) {
+        height: 225px;
+
+    }
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.trilogy__show__title {
+    font-family: $serif;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.trilogy__show__date {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 0;
+}

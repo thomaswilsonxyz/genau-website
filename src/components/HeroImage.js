@@ -2,11 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-const StyledImg = styled.img`
+const StyledImg = styled.div`
   width: 100%;
-  max-height: 300px;
+  height: 300px;
   margin-bottom: 0;
   padding-bottom: 0;
+  background-image: url(${props => props.src});
+  background-size: cover;
+  background-position-y: 25%;
 `
 
 const HeroImage = ({ src, alt }) => {

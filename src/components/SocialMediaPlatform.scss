@@ -1,24 +1,29 @@
 .platform {
-  height: auto;
+    height: auto;
 }
 
 .platform-details {
-  display: flex;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .platform-details__icon {
-  display: flex;
-  width: 50px;
-  height: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .platform-details__name {
-  font-size: 22px;
-  margin-bottom: 5px;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 0px;
 }
 
 .platform-details__handle {
-  font-size: 18px;
-  color: #af0404;
-  text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: #af0404;
+    text-decoration: none;
 }

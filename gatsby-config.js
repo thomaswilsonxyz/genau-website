@@ -19,8 +19,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `headshots`,
-        path: path.join(__dirname, `src`, `images`, `headshots`),
+        name: `trilogy`,
+        path: `${__dirname}/src/images/trilogy`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        name: `trilogy`,
+        path: path.join(__dirname, `src`, `images`, `trilogy`),
       },
     },
     `gatsby-transformer-sharp`,
