@@ -43,6 +43,7 @@ const IndexPage = ({ data }) => (
     </section>
     <section className="social-media">
       <h2 className="section-header">Stay in touch</h2>
+
       <div className="social-media__platforms">
         <SocialMediaPlatform
           name="Twitter"
