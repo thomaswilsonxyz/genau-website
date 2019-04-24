@@ -2,72 +2,62 @@ const members = [
   {
     name: "Maika Klaukien",
     role: "Director",
-    imageUrl: "",
+    fileName: "maika",
   },
   {
     name: "Thomas Wilson",
     role: "Producer & Dancer",
-    imageUrl: "",
+    fileName: "thomas",
   },
   {
     name: "Akane Abe",
     role: "Dancer & Choreographer",
-    imageUrl: "",
+    fileName: "akane",
   },
   {
     name: "Carla Gonclaves",
     role: "Dancer & Rehearsal Director",
-    imageUrl: "",
+    fileName: "carla",
   },
   {
     name: "Pauline S",
     role: "Dancer",
-    imageUrl: "",
+    fileName: "pauline",
   },
   {
     name: "Davide",
     role: "Dancer",
-    imageUrl: "",
+    fileName: "davide",
   },
   {
     name: "Rina Wako",
     role: "Dancer",
-    imageUrl: "",
+    fileName: "rina",
   },
   {
     name: "Maaya Agame",
     role: "Dancer",
-    imageUrl: "",
+    fileName: "maaya",
   },
   {
     name: "Sam",
     role: "Lighting Designer",
-    imageUrl: "",
+    fileName: "sam",
   },
   {
     name: "Michael Haslam",
     role: "Music Director",
-    imageUrl: "",
+    fileName: "michael",
   },
   {
     name: "Lynne Gentle",
     role: "Musician",
-    imageUrl: "",
+    fileName: "lynne",
   },
   {
     name: "So",
     role: "Musician",
-    imageUrl: "",
-  },
-  {
-    name: "So",
-    role: "Musi",
-    imageUrl: "",
-  },
-  {
-    name: "",
-    role: "",
-    imageUrl: "",
+    fileName: "so",
   },
 ]
 

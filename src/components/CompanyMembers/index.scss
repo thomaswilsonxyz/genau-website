@@ -1,0 +1,19 @@
+@import "../../styles/styles.scss";
+
+.headshots {
+    width: $content-width;
+    display: grid;
+    padding: 3 * $basepx;
+
+    @media (min-width: $bp-sm) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $bp-md) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (min-width: $bp-lg) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

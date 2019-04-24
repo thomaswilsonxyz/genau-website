@@ -9,6 +9,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    // Load all images from file system
+    // this is necessary to use any images, which are treated by sharpr
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,10 +26,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `headshots`,
+        path: `${__dirname}/src/images/headshots`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         name: `trilogy`,
-        path: path.join(__dirname, `src`, `images`, `trilogy`),
+        path: `${__dirname}/src/images/headshots`,
       },
     },
     `gatsby-transformer-sharp`,

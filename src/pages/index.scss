@@ -121,7 +121,18 @@ section {
     padding-right: 10px;
 }
 
-.company-members {
+section.performers {
+    justify-content: center;
+    display: flex;
+}
+
+.headshots-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.headshots {
+    width: $content-width;
     display: grid;
     padding: 3 * $basepx;
 
