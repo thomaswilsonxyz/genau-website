@@ -1,9 +1,10 @@
 import React from "react"
+
 import { ShowLayout } from "../../components"
 
-import { kreislauf } from "../../data/trilogy"
+import { hoffnung } from "../../data/trilogy"
 
-const { title, location, date, bodyText } = kreislauf
+const { title, location, date, bodyText } = hoffnung
 
 export default () => (
   <ShowLayout

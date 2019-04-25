@@ -1,9 +1,9 @@
 import React from "react"
 import { ShowLayout } from "../../components"
 
-import { kreislauf } from "../../data/trilogy"
+import { ebb } from "../../data/trilogy"
 
-const { title, location, date, bodyText } = kreislauf
+const { title, location, date, bodyText } = ebb
 
 export default () => (
   <ShowLayout
