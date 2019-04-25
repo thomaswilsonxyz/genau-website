@@ -1,0 +1,19 @@
+@import "../styles/styles.scss";
+
+.navbar {
+  display: flex;
+  width: 100vw;
+  position: sticky;
+  background-color: white;
+  color: black;
+  padding-top: 1 * $basepx;
+  padding-bottom: 1 * $basepx;
+  padding-left: 2 * $basepx;
+  padding-right: 2 * $basepx;
+  margin-top: 2 * $basepx;
+}
+
+.genau-logo {
+  font-family: "Taviraj", serif;
+  font-size: 24px;
+}
