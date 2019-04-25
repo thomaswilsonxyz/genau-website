@@ -1,23 +1,24 @@
-@import "../styles/styles.scss";
+@import "../../styles/styles.scss";
 
 .member {
-    width: 170px;
-    font-family: "Nunito", sans-serif;
-    padding-left: 10px;
-    padding-right: 10px;
+  width: 170px;
+  font-family: "Nunito", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .member__image {
-    width: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
 .member__name {
-    font-size: 18px;
-    margin-bottom: 0;
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 .member__role {
-    font-size: 16px;
-    color: $purple;
-    padding-top: 0px;
+  font-size: 16px;
+  color: $purple;
+  padding-top: 0px;
 }

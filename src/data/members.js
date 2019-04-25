@@ -61,4 +61,6 @@ const members = [
   },
 ]
 
+export const getMemberDetails = fileName =>
+  members.filter(m => m.fileName === fileName)[0]
 export default members

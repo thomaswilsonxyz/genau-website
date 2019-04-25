@@ -9,7 +9,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import { Header, Footer } from "./global"
+
 import "./layout.css"
 
 const Layout = ({ children }) => (
@@ -28,7 +29,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>
-          <footer>©2019, genau dance company</footer>
+          <Footer />
         </div>
       </>
     )}

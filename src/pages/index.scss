@@ -1,150 +1,127 @@
 @import "../styles/styles.scss";
 
-
-
 section {
-    margin-bottom: 25px;
-    margin-top: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .strapline {
-    font-family: $sansserif;
-    margin-top: -6px;
-    width: 100%;
-    height: 100%;
-    background-color: $grey02;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+  font-family: $sansserif;
+  margin-top: -6px;
+  width: 100%;
+  height: 100%;
+  background-color: $grey02;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 .strapline__text {
-    max-width: $content-width;
-    text-align: center;
-    font-size: 20px;
-    line-height: 120%;
-    margin-bottom: 0;
-    padding-top: 8 * $basepx;
-    padding-bottom: 8 * $basepx;
+  max-width: $content-width;
+  text-align: center;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 0;
+  padding-top: 8 * $basepx;
+  padding-bottom: 8 * $basepx;
 }
 
 .strapline__after {
-    background-color: $purple;
-    height: 25px;
-    width: 100%;
+  background-color: $purple;
+  height: 25px;
+  width: 100%;
 }
 
 .trilogy {
-    padding-left: 5 * $basepx;
-    padding-right: 5 * $basepx;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+  padding-left: 5 * $basepx;
+  padding-right: 5 * $basepx;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
+  @media (min-width: 0) {
+    grid-row-gap: $basepx;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 100px;
+  }
 
-    @media (min-width: 0) {
-        grid-row-gap: $basepx;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 100px 100px;
-    }
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(3, 190px);
+    grid-template-rows: 1fr;
+    grid-column-gap: $basepx;
+  }
 
-    @media (min-width: $bp-sm) {
-        grid-template-columns: repeat(3, 190px);
-        grid-template-rows: 1fr;
-        grid-column-gap: $basepx;
-    }
-
-    @media (min-width: $bp-md) {
-        grid-template-columns: repeat(3, 225px);
-        grid-column-gap: 4 * $basepx;
-    }
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(3, 225px);
+    grid-column-gap: 4 * $basepx;
+  }
 }
 
 .section-header {
-    font-size: 22px;
-    font-weight: 600;
-    font-family: $serif;
-    text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: $serif;
+  text-align: center;
 
-    @media (min-width: 0px) {
-        padding-top: 25px;
-    }
+  @media (min-width: 0px) {
+    padding-top: 25px;
+  }
 
-    @media(min-width: $bp-sm) {
-        padding-top: 0px;
-    }
+  @media (min-width: $bp-sm) {
+    padding-top: 0px;
+  }
 }
 
 .social-media {
-    background-color: #f5f5f5;
-    padding-left: 3 * $basepx;
-    padding-right: 3 * $basepx;
-    padding-bottom: 8 * $basepx;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 250px;
+  background-color: #f5f5f5;
+  padding-left: 3 * $basepx;
+  padding-right: 3 * $basepx;
+  padding-bottom: 8 * $basepx;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
 }
 
 .social-media:after {
-    content: '';
-    width: 40px;
-    height: 250px;
-    background-color: $purple;
-    position: absolute;
-    transform: translateX(325px) translateY(20px);
-
-
+  content: "";
+  width: 40px;
+  height: 250px;
+  background-color: $purple;
+  position: absolute;
+  transform: translateX(325px) translateY(20px);
 }
 
 .social-media__platforms {
-    display: grid;
-    max-width: $content-width + 100px;
-    grid-column-gap: 45px;
-    padding-top: 20px;
+  display: grid;
+  max-width: $content-width + 100px;
+  grid-column-gap: 45px;
+  padding-top: 20px;
 
-    @media (min-width: 0px) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 20px;
-    }
+  @media (min-width: 0px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+  }
 
-    @media (min-width: 500px) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  @media (min-width: 500px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 section.performers {
-    justify-content: center;
-    display: flex;
+  justify-content: center;
+  display: flex;
 }
 
 .headshots-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.headshots {
-    width: $content-width;
-    display: grid;
-    padding: 3 * $basepx;
-
-    @media (min-width: $bp-sm) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @media (min-width: $bp-md) {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    @media (min-width: $bp-lg) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  display: flex;
+  justify-content: center;
 }
