@@ -33,12 +33,12 @@ const IndexPage = ({ data }) => (
           imageUrl={data.ebbImage.edges[0].node.publicURL}
           linkUrl={"/shows/ebb"}
         />
-        <TrilogyTile
+        {/* <TrilogyTile
           name="Kreislauf"
           date="2019"
           imageUrl={data.kreislaufImage.edges[0].node.publicURL}
         />
-        <TrilogyTile name="Hoffnung" date="2020" imageUrl={data} />
+        <TrilogyTile name="Hoffnung" date="2020" imageUrl={data} /> */}
       </section>
       <section className="social-media">
         <h2 className="section-header">Stay in touch</h2>
