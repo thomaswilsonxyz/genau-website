@@ -88,11 +88,12 @@ $text-padding: 10px;
   }
 }
 
-.image-container {
+.header-image__container {
   height: 250px;
   width: 100vw;
-  margin-left: -2 * $basepx; // specifi
+}
 
+.ebb-header {
   img {
     @media (max-width: 800px) {
       object-position: 0 -80px;
@@ -107,7 +108,27 @@ $text-padding: 10px;
     }
 
     @media (min-width: 800px) {
-      object-position: 0 -120px;
+      object-position: 0 -150px;
+    }
+  }
+}
+
+.kreislauf-header {
+  img {
+    @media (max-width: 800px) {
+      object-position: 0 -90px;
+    }
+
+    @media (max-width: 600px) {
+      object-position: 0 -60px;
+    }
+
+    @media (max-width: 500px) {
+      object-position: 0 0;
+    }
+
+    @media (min-width: 1000px) {
+      object-position: 0 -220px;
     }
   }
 }
