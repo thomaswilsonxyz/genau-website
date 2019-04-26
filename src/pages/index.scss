@@ -45,17 +45,17 @@ section {
   @media (min-width: 0) {
     grid-row-gap: $basepx;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-rows: repeat(3, $trilogy-tile-height);
   }
 
   @media (min-width: $bp-sm) {
-    grid-template-columns: repeat(3, 190px);
+    grid-template-columns: repeat(3, $trilogy-tile-height);
     grid-template-rows: 1fr;
     grid-column-gap: $basepx;
   }
 
   @media (min-width: $bp-md) {
-    grid-template-columns: repeat(3, 225px);
+    grid-template-columns: repeat(3, $trilogy-tile-height);
     grid-column-gap: 4 * $basepx;
   }
 }

@@ -3,18 +3,7 @@
 .trilogy__show {
   font-family: "Taviraj", serif;
   color: white;
-
-  @media (min-width: 0) {
-    height: 100%;
-  }
-
-  @media (min-width: $bp-sm) {
-    height: 190px;
-  }
-
-  @media (min-width: $bp-md) {
-    height: 225px;
-  }
+  height: $trilogy-tile-height;
 
   display: flex;
   flex-flow: column;
