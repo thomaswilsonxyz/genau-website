@@ -127,13 +127,8 @@ export const ebb = {
 
 export const kreislauf = {
   title: "Kreislauf",
-  date: "Novermber 2017",
-  location: "St. John's Church, London",
-  bodyText: (
-    <React.Fragment>
-      <p>About Kreislauf</p>
-    </React.Fragment>
-  ),
+  date: "February 2019",
+  location: "The Cockpit Theatre, London",
 }
 
 export const hoffnung = {

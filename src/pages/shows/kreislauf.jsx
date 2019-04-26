@@ -51,6 +51,7 @@ export default ({ data }) => (
     location={location}
     date={date}
     headerImage={data.headerImage}
+    headerImageClass="kreislauf-header"
     galleryImageNodes={data.galleryImages.edges}
     bodyHtml={data.showHtml.html}
   />

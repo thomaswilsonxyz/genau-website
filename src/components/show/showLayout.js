@@ -39,6 +39,7 @@ const ShowLayout = ({
   location,
   date,
   headerImage,
+  headerImageClass,
   galleryImageNodes,
   bodyHtml,
 }) => (
@@ -51,7 +52,7 @@ const ShowLayout = ({
       <Img
         fluid={getHeaderFluid(headerImage)}
         fadeIn
-        className="image-container"
+        className={`header-image__container ${headerImageClass}`}
         imgStyle={{
           objectPosition: undefined, // defined in scss
         }}
@@ -87,6 +88,7 @@ ShowLayout.propTypes = {
   location: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   headerImage: PropTypes.object.isRequired,
+  headerImageClass: PropTypes.string.isRequired,
   bodyText: PropTypes.element.isRequired,
   galleryImageNodes: PropTypes.array.isRequired,
 }

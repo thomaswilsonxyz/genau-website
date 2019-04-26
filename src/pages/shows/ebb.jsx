@@ -44,6 +44,7 @@ export default ({ data }) => (
     location={location}
     date={date}
     headerImage={data.headerImage}
+    headerImageClass="ebb-header"
     bodyHtml={data.showHtml.html}
     galleryImageNodes={data.galleryImages.edges}
   />
