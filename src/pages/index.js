@@ -31,6 +31,7 @@ const IndexPage = ({ data }) => (
           name="Ebb & Flood"
           date="2017"
           imageUrl={data.ebbImage.edges[0].node.publicURL}
+          linkUrl={"/shows/ebb"}
         />
         <TrilogyTile
           name="Kreislauf"

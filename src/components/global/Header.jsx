@@ -12,6 +12,7 @@ const Header = () => (
         color: "#22292f",
         fontSize: 18,
         textDecoration: "none",
+        padding: 0,
       }}
     >
       genau dance co

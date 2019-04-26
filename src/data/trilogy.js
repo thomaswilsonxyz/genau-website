@@ -1,74 +1,85 @@
 import React from "react"
+import { EbbHeader } from "../components/show/HeaderImages"
+import { EbbImageGallery } from "../components/show/ImageGalleries"
 
 export const ebb = {
   title: "Ebb & Flood",
   date: "November 2017",
   location: "St. Leonard's Church, London",
-  headerImageFile: "",
+  Header: EbbHeader,
+  ImageGallery: EbbImageGallery,
   tagLine: "",
   bodyText: (
     <React.Fragment>
       <p>
-        Theme: Resilience, realized through an artistic exploration of the
-        rhythm of flow, waves which generate impact and forward motion followed
-        by response, undertow and return. I draw on the German translation of
-        the word Resilience for inspiration, namely, Elastizität - Elasticity.
+        Ebb &amp; Flood was the first piece in the resilience trilogy. It
+        explored the rhythm of flow: waves, impact, motion, response, undertow,
+        and return. We drew on the German translation of the word Resilience{" "}
+        <i>Elastizität</i> - Elasticity.
       </p>
 
       <p>
-        The work is held together by an explosive power and strength, harnessed
-        to ceaseless motion. The theme speaks to life itself, a way to live in
-        our time. Every action is met by an equal and opposite reaction. Each
-        event generates an even stronger backlash. Turns in unexpected and
-        different directions cascade and ricochet, pulled and pushed by random
-        elasticity. All around is surprise, unpredictability, shock.
-      </p>
-      <p>Resilience is living with the waves and riding them.</p>
-      <p>
-        And, as the undertow, we hear the words of Shakespeare, living still,
-        alive tonight, in this, St Leonard’s, his church. Redolent with
-        humanity, wrought in matchless prose, we live the interplay between
-        power and the vulnerable, the eternal, yoked dance of the weak and the
-        strong.
+        The piece was seen as a commentary, and exploration, of the way we live
+        in our time. We live the interplay between power and vulnerability, a
+        dance of the weak and the strong. Every action is met by an equal and
+        opposite reaction. Each event generates an even stronger backlash. Turns
+        in unexpected and different directions cascade and ricochet, pulled and
+        pushed by random elasticity. All around is surprise, unpredictability,
+        shock.
       </p>
       <p>
-        The aim of the event is to evoke emotions, provoke thought and encourage
-        the audience to immerse itself in the creative elasticity of the
-        inexorable ebb and flow of their own lives in the present and in the
-        performance space.
+        The piece purposefully saught to evoke emotions, provoke thought, and
+        and immerse the audience in the creative elasticity, and inexorable Ebb
+        and Flow of own lives outside of the performance space.
+      </p>
+      <h2>St. Leonard's Church</h2>
+      <p>
+        Situated in East London, St Leonard’s Church (also known as{" "}
+        <a href="https://www.shoreditchchurch.org.uk/">Shoreditch Church</a>) is
+        dedicated to St Leonard, the patron saint of prisoners and those who are
+        mentally ill. There has been a church on the site for many centuries.
       </p>
       <p>
-        St Leonard’s church in Shoreditch is the core of this collaborative
-        project, a site-specific performance and a fundraising event for the
-        charity Foundation for Change based in the Church.
+        The site became the actors’ church. The nearby New Inn Yard hosted the
+        initial performances of several of Shakespeare’s plays Many of the
+        Elizabethan theatrical fraternity are buried in the medieval church
+        under the crypt. This includes three Burbages:{" "}
+        <strong>James Burbage</strong> who built the first English theatre; his
+        son, <strong>Cuthbert</strong>who built the Globe theatre; and his other
+        son, /<strong>Richard</strong>, who was the first to play Macbeth,
+        Hamlet, Richard 3rd, Othello, and Romeo. So the first Romeo is buried in
+        the crypt where Shakespeare placed the final scene of his tragic play.
       </p>
       <p>
-        The project is inspired by the approach of the charity, the ethos of the
-        Church, the history of the East End and by the spirit of our times. St
+        The church has always been committed to its community, particularly
+        those who live on the streets that often have difficulties with alcohol
+        or substance abuse. The church built Acorn House, an 18 bed alcohol
+        rehabilitation centre which is run by the Spitalfields Crypt Trust.
+      </p>
+      <p>
+        The project is inspired by the approach of the church, and its many
+        chartiable connections - as well as the rich history of the East End. St
         Leonard’s, its features and architecture, its history and tradition is
         deeply rooted in the area. This protective and welcoming space serves as
-        a starting point for the project and will be an integral part of the
-        performance.
+        a starting point for the project and was an integral part of the
+        creative process and ultimate performance.
       </p>
+
+      <h2>Foundation for Change</h2>
       <p>
-        Inspired in this way artists will work together to realize the ambition
-        of this urgent, contemporary theme. They include composer Michael
-        Haslam, Director of Music at St. James Church, Piccadilly, Trimmer,
-        saxophonist, lighting designer Jonathan Samuels, Oana Stanciu
-        (projection artist), Osca Whiting (designer) and eight performers
-        brought together by Maika Klaukien, the artistic director and
-        choreographer.
-      </p>
-      <p>Foundation for Change</p>
-      <p>
-        Foundation for Change (FfC) is a registered charity that exists to bring
-        about social change through education. The founders, Bob Bharij and Liz
-        Naylor, have worked together since 2005 and set up FfC in 2014. They now
-        have a small team of staff and volunteers based in St Leonard’s church.
-        The aim of FfC is to provide a sophisticated response to the complexity
-        of disadvantage, tackling social exclusion and enabling people who have
-        experienced significant difficulties with drugs or alcohol to
-        participate in society.
+        Ebb &amp; flood was created collaboratively alongside the registered
+        charity
+        <a href="https://www.foundationforchange.org.uk/">
+          {" "}
+          Foundation for Change
+        </a>
+        . FfC work for social change through education. The founders, Bob Bharij
+        and Liz Naylor, have worked together since 2005 and set up FfC in 2014.
+        They now have a small team of staff and volunteers based in St Leonard’s
+        church. The aim of FfC is to provide a sophisticated response to the
+        complexity of disadvantage, tackling social exclusion and enabling
+        people who have experienced significant difficulties with drugs or
+        alcohol to participate in society.
       </p>
       <p>
         Through their programmes, they help those they work with to consciously
@@ -95,36 +106,25 @@ export const ebb = {
         their own tailoring business for individuals who want to work towards
         self-employment.
       </p>
-      <p>St Leonard’s Church</p>
+
       <p>
-        Dedicated to St Leonard, the patron saint of prisoners and those who are
-        mentally ill, there has been a church on the present site for many
-        centuries. It was this church which became the actors’ church. The first
-        English theatre was close by in New Inn Yard where several of
-        Shakespeare’s plays had their initial performance. Many of the
-        Elizabethan theatrical fraternity are buried in the medieval church
-        under our crypt. This includes three Burbages, James who built the first
-        English theatre, his son Cuthbert who built the Globe theatre and his
-        other son Richard who was the first to play Macbeth, Hamlet, Richard
-        3rd, Othello and especially Romeo. So the first Romeo is buried in the
-        crypt where Shakespeare placed the final scene of his tragic play.
+        FfC work in partnership with Spitalfields Crypt Trust, specifically the
+        New Hanbury Project, delivering a 10 week introduction to psychology
+        course to compliment the vocational courses they offer to those in
+        recovery. Volunteers from the New Hanbury Project have re-landscaped the
+        church gardens and tend to it daily, creating a wonderful haven away
+        from the bustling Shoreditch High Street. The church grounds also
+        include an allotment where volunteers in recovery from drug/alcohol
+        dependency grow vegetables that are eaten in Acorn House.
       </p>
+      <h2>Credits and Thanks</h2>
       <p>
-        St Leonard’s Church, also known as Shoreditch Church, has always been
-        committed to its community, particularly those who live on the streets
-        that often have difficulties with drugs and/or alcohol. The church built
-        Acorn House, an 18 bed alcohol rehabilitation centre that is run by the
-        Spitalfields Crypt Trust (SCT).
-      </p>
-      <p>
-        FfC work in partnership with SCT, specifically the New Hanbury Project,
-        delivering a 10 week introduction to psychology course to compliment the
-        vocational courses they offer to those in recovery. Volunteers from the
-        New Hanbury Project have re-landscaped the church gardens and tend to it
-        daily, creating a wonderful haven away from the bustling Shoreditch High
-        Street. The church grounds also include an allotment where volunteers in
-        recovery from drug/alcohol dependency grow vegetables that are eaten in
-        Acorn House.
+        Alongside the collaboration between Maika Klaukien (artistic director
+        and choreographer) and Church staff, Ebb &amp; Flood was created with
+        the work of Michael Haslam, Composer (Director of Music at St. James
+        Church, Piccadilly); Trimmer, saxophonist; Jonathan Samuels, lighting
+        designer; Oana Stanciu, projection artist; Osca Whiting, designer; and
+        eight performers.
       </p>
     </React.Fragment>
   ),
