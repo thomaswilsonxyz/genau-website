@@ -1,113 +1,89 @@
-.header {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+@import "../styles/styles.scss";
+
+.show-header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-bottom: 15px;
 }
 
-.header__title {
-    font-family: Taviraj;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: normal;
-    text-align: center;
-    color: #000000;
-    padding: 0;
-    margin: 0;
+.show-header__title {
+  font-family: Taviraj;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: normal;
+  text-align: center;
+  color: #000000;
+  padding: 0;
+  margin: 0;
 }
 
-.header__subtitle {
-    font-family: Adamina;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: normal;
-    color: #595959;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+.show-header__subtitle {
+  font-family: Adamina;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: normal;
+  color: #595959;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 $text-width: 650px;
 $icon-width: 40px;
-$text-break-point: $text-width+$icon-width;
-$image-gallery-break-point: $text-break-point+100px;
+$text-break-point: $text-width + $icon-width;
+$image-gallery-break-point: $text-break-point + 100px;
 $text-padding: 10px;
 
 .back-icon {
-    color: #AF0404;
-    display: flex;
-    justify-content: center;
+  color: #af0404;
+  display: flex;
+  justify-content: center;
 }
 
 .back-icon__container {
-    display: flex;
-    width: $text-width;
-    justify-content: left;
-    padding-left: $text-padding;
-    padding-right: $text-padding;
+  display: flex;
+  width: $text-width;
+  justify-content: left;
+  padding-left: $text-padding;
+  padding-right: $text-padding;
 
-    @media(min-width: $text-break-point) {
-        margin-left: -$icon-width;
-        padding-left: 0;
-        parring-right: 0;
-    }
+  @media (min-width: $text-break-point) {
+    margin-left: -$icon-width;
+    padding-left: 0;
+    parring-right: 0;
+  }
 }
 
 .back-icon__icon {
-    display: flex;
-    height: auto;
-    justify-content: center;
+  display: flex;
+  height: auto;
+  justify-content: center;
 }
 
 .back-icon__text {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .text {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    padding-top: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 0;
 }
 
 .text__body {
-    max-width: $text-width;
-    align-items: center;
-    font-size: 18px;
-    line-height: 25px;
-    padding-left: $text-padding;
-    padding-right: $text-padding;
+  max-width: $text-width;
+  align-items: center;
+  font-size: 18px;
+  line-height: 25px;
+  padding-left: $text-padding;
+  padding-right: $text-padding;
 
-    p {
-        margin-bottom: 25px;
-    }
-}
-
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.image-gallery__container {
-    display: grid;
-    column-gap: 15px;
-    row-gap: 15px;
-
-    @media(max-width: $image-gallery-break-point - 1px) {
-        grid-template-columns: 1fr;
-    }
-
-    @media(min-width: $image-gallery-break-point) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.image-gallery__image {
-    background-color: blue;
-    height: 195px;
-    width: 195px;
+  p {
+    margin-bottom: 25px;
+    font-family: $sansserif;
+  }
 }

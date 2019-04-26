@@ -1,0 +1,27 @@
+@import "../../styles/show-page.scss";
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-gallery__container {
+  display: grid;
+  column-gap: 15px;
+  row-gap: 15px;
+
+  @media (max-width: $image-gallery-break-point - 1px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: $image-gallery-break-point) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.image-gallery__image {
+  background-color: blue;
+  height: 195px;
+  width: 195px;
+}

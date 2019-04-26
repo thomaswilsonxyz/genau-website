@@ -36,7 +36,21 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         name: `trilogy`,
+        path: `${__dirname}/src/images/trilogy`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        name: `headshots`,
         path: `${__dirname}/src/images/headshots`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        name: `shows`,
+        path: `${__dirname}/src/images/shows/**`,
       },
     },
     `gatsby-transformer-sharp`,
