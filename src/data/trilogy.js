@@ -1,14 +1,9 @@
 import React from "react"
-import { EbbHeader } from "../components/show/HeaderImages"
-import { EbbImageGallery } from "../components/show/ImageGalleries"
 
 export const ebb = {
   title: "Ebb & Flood",
   date: "November 2017",
   location: "St. Leonard's Church, London",
-  Header: EbbHeader,
-  ImageGallery: EbbImageGallery,
-  tagLine: "",
   bodyText: (
     <React.Fragment>
       <p>
@@ -134,14 +129,6 @@ export const kreislauf = {
   title: "Kreislauf",
   date: "Novermber 2017",
   location: "St. John's Church, London",
-  headerImageFile: "",
-  tagLine: `
-      Kreislauf, which translates as "circulation" in German, was performed in 
-      January 2019 at The Cockpit Theatre, Marleybone. It was inspired by the human heart, 
-      exploring ideas around strength through unity versus individuality, 
-      human connection and compatibility, and group support.
-    `,
-  description: ``,
   bodyText: (
     <React.Fragment>
       <p>About Kreislauf</p>
