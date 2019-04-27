@@ -2,9 +2,6 @@ import React from "react"
 import ShowLayout from "../../components/show/showLayout"
 import { graphql } from "gatsby"
 
-import { kreislauf } from "../../data/trilogy"
-const { title, location, date, bodyText } = kreislauf
-
 export const query = graphql`
   query KreislaufPageQuery {
     headerImage: allFile(

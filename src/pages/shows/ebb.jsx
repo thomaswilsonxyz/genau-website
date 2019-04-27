@@ -1,8 +1,6 @@
 import React from "react"
 import { ShowLayout } from "../../components"
 
-import { ebb } from "../../data/trilogy"
-
 export const query = graphql`
   query EbbPageQuery {
     headerImage: allFile(
