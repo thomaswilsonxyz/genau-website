@@ -60,6 +60,7 @@ module.exports = {
         path: `${__dirname}/src/images/shows/**`,
       },
     },
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,

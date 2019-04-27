@@ -1,34 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import "./TrilogyTile.scss"
 
-const BackgroundImage = styled.div`
-  background-image: url(${props => props.src});
-  background-position: center center;
-  background-size: cover;
-`
-
-const TrilogyTile = ({ imageUrl, name, date, linkUrl }) => {
+const TrilogyTile = ({ imageFluid, name, date, linkUrl }) => {
   return (
     <Link to={linkUrl}>
-      <BackgroundImage
-        className="trilogy__show"
-        id="ebb-and-flood"
-        src={imageUrl}
-      >
-        <h2 className="trilogy__show__title">{name}</h2>
-        <p className="trilogy__show__date">{date}</p>
-      </BackgroundImage>
+      <div className="trilogy-tile">
+        <Img fluid={imageFluid} className="trilogy-tile__image" />
+        <div className="trilogy-tile__text">
+          <h2 className="trilogy__show__title">{name}</h2>
+          <p className="trilogy__show__date">{date}</p>
+        </div>
+      </div>
     </Link>
   )
 }
 
 TrilogyTile.propTypes = {
   linkUrl: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
+  imageFluid: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
 }

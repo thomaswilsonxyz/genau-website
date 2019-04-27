@@ -46,24 +46,29 @@ const IndexPage = ({ data }) => {
           <TrilogyTile
             name="Ebb & Flood"
             date="2017"
-            imageUrl={data.ebbImage.edges[0].node.publicURL}
+            imageFluid={data.ebbImage.edges[0].node.childImageSharp.fluid}
             linkUrl={"/shows/ebb"}
           />
           <TrilogyTile
             name="Kreislauf"
             date="2019"
-            imageUrl={data.kreislaufImage.edges[0].node.publicURL}
+            imageFluid={data.kreislaufImage.edges[0].node.childImageSharp.fluid}
             linkUrl="/shows/kreislauf"
           />
           <TrilogyTile
             name="Hoffnung"
             date="2020"
-            imageUrl={data.hoffnungImage.edges[0].node.publicURL}
+            imageFluid={data.hoffnungImage.edges[0].node.childImageSharp.fluid}
             linkUrl="/shows/hoffnung"
           />
         </section>
         <section className="social-media">
-          <h2 className="section-header">Stay in touch</h2>
+          <div className="section-header">
+            <div className="section-header__wrapper">
+              <h2 className="section-header__wrapper__text">Stay in Touch</h2>
+              <div className="section-header__wrapper__background" />
+            </div>
+          </div>
 
           <div className="social-media__platforms">
             <SocialMediaPlatform
@@ -87,7 +92,14 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
         <section>
-          <h2 className="section-header">Meet the Performers</h2>
+          <div className="section-header">
+            <div className="section-header__wrapper">
+              <h2 className="section-header__wrapper__text">
+                Meet the Performers
+              </h2>
+              <div className="section-header__wrapper__background" />
+            </div>
+          </div>
 
           <div className="headshots-wrapper">
             <CompanyMembers />
@@ -98,8 +110,8 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const ebbImage = graphql`
-  {
+export const indexPageQuery = graphql`
+  query {
     headerImage: allFile(filter: { name: { eq: "genau-header-image" } }) {
       edges {
         node {
@@ -118,7 +130,11 @@ export const ebbImage = graphql`
       edges {
         node {
           name
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
@@ -131,7 +147,11 @@ export const ebbImage = graphql`
       edges {
         node {
           name
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
@@ -141,7 +161,11 @@ export const ebbImage = graphql`
       edges {
         node {
           name
-          publicURL
+          childImageSharp {
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }
