@@ -1,6 +1,6 @@
 @import "../styles/styles";
 
-.trilogy__show {
+.trilogy-tile {
   font-family: "Taviraj", serif;
   color: white;
   height: $trilogy-tile-height;
@@ -9,13 +9,28 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  transition: transform 2s ease-in-out;
+  position: relative; //
 
   :hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    transition: all 0.1s ease-in;
   }
 }
 
+.trilogy-tile__image {
+  height: 100%;
+  width: 100%;
+}
+
+.trilogy-tile__text {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  pointer-events: none; // When we mousemove image, it will increase in size
+  position: absolute; // will be placed over the image, but inside the parent
+  justify-content: center;
+  text-align: center;
+}
 .trilogy__show__title {
   font-family: $serif;
   color: white;
