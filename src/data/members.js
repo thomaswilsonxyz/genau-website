@@ -20,11 +20,6 @@ const members = [
     fileName: "carla",
   },
   {
-    name: "Pauline S",
-    role: "Dancer",
-    fileName: "pauline",
-  },
-  {
     name: "Davide",
     role: "Dancer",
     fileName: "davide",
@@ -38,6 +33,11 @@ const members = [
     name: "Maaya Agame",
     role: "Dancer",
     fileName: "maaya",
+  },
+  {
+    name: "Pauline Schwartz",
+    role: "Dancer",
+    fileName: "pauline",
   },
   {
     name: "Sam",

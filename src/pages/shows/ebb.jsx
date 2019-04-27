@@ -1,10 +1,6 @@
 import React from "react"
 import { ShowLayout } from "../../components"
 
-import { ebb } from "../../data/trilogy"
-
-const { title, location, date, bodyText } = ebb
-
 export const query = graphql`
   query EbbPageQuery {
     headerImage: allFile(
@@ -32,7 +28,12 @@ export const query = graphql`
         }
       }
     }
-    showHtml: markdownRemark(frontmatter: { title: { eq: "ebb show text" } }) {
+    showHtml: markdownRemark(frontmatter: { title: { eq: "Ebb & Flood" } }) {
+      frontmatter {
+        title
+        location
+        date
+      }
       html
     }
   }
@@ -40,9 +41,9 @@ export const query = graphql`
 
 export default ({ data }) => (
   <ShowLayout
-    title={title}
-    location={location}
-    date={date}
+    title={data.showHtml.frontmatter.title}
+    location={data.showHtml.frontmatter.location}
+    date={data.showHtml.frontmatter.date}
     headerImage={data.headerImage}
     headerImageClass="ebb-header"
     bodyHtml={data.showHtml.html}

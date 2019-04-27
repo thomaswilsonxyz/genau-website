@@ -1,14 +1,12 @@
 import React from "react"
-import ShowLayout from "../../components/show/showLayout"
 import { graphql } from "gatsby"
 
-export const query = graphql`
-  query KreislaufPageQuery {
+import ShowLayout from "../../components/show/showLayout"
+
+export const pageData = graphql`
+  query HoffnungPageQuery {
     headerImage: allFile(
-      filter: {
-        relativeDirectory: { eq: "trilogy" }
-        name: { eq: "kreislauf" }
-      }
+      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "hoffnung" } }
     ) {
       edges {
         node {
@@ -21,7 +19,7 @@ export const query = graphql`
       }
     }
     galleryImages: allFile(
-      filter: { relativeDirectory: { eq: "shows/kreislauf" } }
+      filter: { relativeDirectory: { eq: "shows/hoffnung" } }
     ) {
       edges {
         node {
@@ -34,7 +32,7 @@ export const query = graphql`
         }
       }
     }
-    showHtml: markdownRemark(frontmatter: { title: { eq: "Kreislauf" } }) {
+    showHtml: markdownRemark(frontmatter: { title: { eq: "Hoffnung" } }) {
       frontmatter {
         title
         location
@@ -47,12 +45,12 @@ export const query = graphql`
 
 export default ({ data }) => (
   <ShowLayout
-    title={data.showHtml.frontmatter.title}
-    date={data.showHtml.frontmatter.date}
-    location={data.showHtml.frontmatter.location}
     headerImage={data.headerImage}
-    headerImageClass="kreislauf-header"
-    galleryImageNodes={data.galleryImages.edges}
+    headerImageClass="hoffnung-header"
     bodyHtml={data.showHtml.html}
+    date={data.showHtml.frontmatter.date}
+    title={data.showHtml.frontmatter.title}
+    location={data.showHtml.frontmatter.location}
+    galleryImageNodes={[]}
   />
 )
