@@ -1,5 +1,7 @@
 ---
-title: "ebb show text"
+title: "Ebb & Flood"
+location: "St. Leondard's Church, Shoreditch"
+date: "November 2017"
 ---
 
 Ebb & Flood was the first piece in the resilience trilogy. It explored the rhythm of flow: waves, impact, motion, response, undertow, and return. We drew on the German translation of the word Resilience _Elastizität_ - Elasticity.

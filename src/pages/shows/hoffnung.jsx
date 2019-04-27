@@ -1,12 +1,12 @@
 import React from "react"
-import { ShowLayout } from "../../components"
+import { graphql } from "gatsby"
 
-import { ebb } from "../../data/trilogy"
+import ShowLayout from "../../components/show/showLayout"
 
-export const query = graphql`
-  query EbbPageQuery {
+export const pageData = graphql`
+  query HoffnungPageQuery {
     headerImage: allFile(
-      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "ebb" } }
+      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "hoffnung" } }
     ) {
       edges {
         node {
@@ -18,7 +18,9 @@ export const query = graphql`
         }
       }
     }
-    galleryImages: allFile(filter: { relativeDirectory: { eq: "shows/ebb" } }) {
+    galleryImages: allFile(
+      filter: { relativeDirectory: { eq: "shows/hoffnung" } }
+    ) {
       edges {
         node {
           id
@@ -30,7 +32,7 @@ export const query = graphql`
         }
       }
     }
-    showHtml: markdownRemark(frontmatter: { title: { eq: "Ebb & Flood" } }) {
+    showHtml: markdownRemark(frontmatter: { title: { eq: "Hoffnung" } }) {
       frontmatter {
         title
         location
@@ -43,12 +45,12 @@ export const query = graphql`
 
 export default ({ data }) => (
   <ShowLayout
+    headerImage={data.headerImage}
+    headerImageClass="hoffnung-header"
+    bodyHtml={data.showHtml.html}
+    date={data.showHtml.frontmatter.date}
     title={data.showHtml.frontmatter.title}
     location={data.showHtml.frontmatter.location}
-    date={data.showHtml.frontmatter.date}
-    headerImage={data.headerImage}
-    headerImageClass="ebb-header"
-    bodyHtml={data.showHtml.html}
-    galleryImageNodes={data.galleryImages.edges}
+    galleryImageNodes={[]}
   />
 )

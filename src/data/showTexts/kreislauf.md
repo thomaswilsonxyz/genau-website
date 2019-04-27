@@ -1,5 +1,7 @@
 ---
-title: "kreislauf show text"
+title: "Kreislauf"
+location: "The Cockpit Theatre"
+date: "February 2019"
 ---
 
 Kreislauf explored, and was inspired by, the human heart, from both a biological and social perspective. This theme explains the piece’s title: a German compound word formed from two parts: Kreis (circle), and lauf (run). Functionally this can be translated into English as _Circulation_ (of the blood).

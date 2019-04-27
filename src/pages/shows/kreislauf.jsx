@@ -37,9 +37,12 @@ export const query = graphql`
         }
       }
     }
-    showHtml: markdownRemark(
-      frontmatter: { title: { eq: "kreislauf show text" } }
-    ) {
+    showHtml: markdownRemark(frontmatter: { title: { eq: "Kreislauf" } }) {
+      frontmatter {
+        title
+        location
+        date
+      }
       html
     }
   }
@@ -47,9 +50,9 @@ export const query = graphql`
 
 export default ({ data }) => (
   <ShowLayout
-    title={title}
-    location={location}
-    date={date}
+    title={data.showHtml.frontmatter.title}
+    date={data.showHtml.frontmatter.date}
+    location={data.showHtml.frontmatter.location}
     headerImage={data.headerImage}
     headerImageClass="kreislauf-header"
     galleryImageNodes={data.galleryImages.edges}
