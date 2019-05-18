@@ -6,7 +6,7 @@ import "./index.scss"
 
 const imagesQuery = graphql`
   query {
-    allFile(filter: { relativeDirectory: { eq: "headshots" } }) {
+    allFile(filter: { sourceInstanceName: { eq: "headshots" } }) {
       edges {
         node {
           id

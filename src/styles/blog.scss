@@ -1,0 +1,110 @@
+@import "./styles.scss";
+
+$header-padding: 10 * $basepx;
+$most-recent-padding: 5 * $basepx;
+$most-recent-image-width: 200px;
+$header-bp-sm: 500px;
+
+.header {
+  padding-top: $header-padding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.header__most-recent {
+  display: grid;
+  text-decoration: none;
+
+  max-width: 775px;
+  padding-top: $most-recent-padding;
+  padding-bottom: $most-recent-padding;
+
+  @media (min-width: 0px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: $header-bp-sm) {
+    grid-template-columns: $most-recent-image-width + (3 * $basepx) 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.header__most-recent__image {
+  height: 100%;
+  margin-right: 3 * $basepx;
+  @include bp-max-flex-center($header-bp-sm);
+}
+
+.header__most-recent__image__img {
+  border-radius: 50%;
+}
+
+.header__most-recent__text {
+  display: flex;
+  flex-flow: column;
+  color: black;
+  @include bp-max-flex-center($header-bp-sm);
+}
+
+$tag-padding: 3 * $basepx;
+
+.header__most-recent__text__tag {
+  background-color: $red;
+  color: white;
+  font-family: $sansserif;
+  display: flex;
+  max-width: fit-content;
+  font-size: 23px;
+  border-radius: 15px;
+  margin-bottom: 1 * $basepx;
+  padding-left: $tag-padding;
+  padding-right: $tag-padding;
+}
+
+.header__most-recent__text__title {
+  color: black;
+  font-family: $serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+.header__most-recent__text__author {
+  color: $grey03;
+  font-size: 20px;
+  margin-bottom: 2 * $basepx;
+}
+
+.header__most-recent__text__preview {
+  @media (min-width: 0px) {
+    text-align: center;
+    width: 90%;
+  }
+
+  @media (min-width: $header-bp-sm) {
+    text-align: left;
+    width: auto;
+  }
+}
+
+.header__colour-stripe {
+  margin-left: -2 * $basepx;
+  width: calc(100vw + 10px);
+  height: 15px;
+  background-color: $red;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+}
+
+.body__posts {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}

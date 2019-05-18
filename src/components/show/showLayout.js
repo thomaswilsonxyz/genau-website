@@ -10,7 +10,6 @@ const getHeaderFluid = headerImage =>
   headerImage.edges[0].node.childImageSharp.fluid
 
 const ImageGallery = ({ imageNodes }) => {
-  console.log(imageNodes)
   return (
     <div className="image-gallery">
       <div className="image-gallery__container">

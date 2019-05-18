@@ -4,11 +4,26 @@
   font-family: "Taviraj", serif;
 }
 
-.header {
+.g-header {
   display: flex;
   width: 100vw;
   position: sticky;
   background-color: white;
   color: $black;
   padding: 2 * $basepx;
+}
+
+.g-header__logo {
+  font-family: $serif;
+  color: $purple;
+  font-size: $font-size-heading;
+}
+
+.g-header__blog {
+  font-family: $serif;
+  font-size: $font-size-subheading;
+  color: $purple;
+  justify-content: center;
+  display: flex;
+  padding-left: 25px;
 }

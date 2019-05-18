@@ -13,7 +13,6 @@ import "./index.scss"
 const iconSize = 40
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <React.Fragment>
@@ -125,7 +124,7 @@ export const indexPageQuery = graphql`
       }
     }
     ebbImage: allFile(
-      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "ebb" } }
+      filter: { sourceInstanceName: { eq: "trilogy" }, name: { eq: "ebb" } }
     ) {
       edges {
         node {
@@ -140,7 +139,7 @@ export const indexPageQuery = graphql`
     }
     kreislaufImage: allFile(
       filter: {
-        relativeDirectory: { eq: "trilogy" }
+        sourceInstanceName: { eq: "trilogy" }
         name: { eq: "kreislauf" }
       }
     ) {
@@ -156,7 +155,10 @@ export const indexPageQuery = graphql`
       }
     }
     hoffnungImage: allFile(
-      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "hoffnung" } }
+      filter: {
+        sourceInstanceName: { eq: "trilogy" }
+        name: { eq: "hoffnung" }
+      }
     ) {
       edges {
         node {
