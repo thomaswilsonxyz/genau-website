@@ -4,7 +4,7 @@ import { ShowLayout } from "../../components"
 export const query = graphql`
   query EbbPageQuery {
     headerImage: allFile(
-      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "ebb" } }
+      filter: { sourceInstanceName: { eq: "trilogy" }, name: { eq: "ebb" } }
     ) {
       edges {
         node {
@@ -16,7 +16,12 @@ export const query = graphql`
         }
       }
     }
-    galleryImages: allFile(filter: { relativeDirectory: { eq: "shows/ebb" } }) {
+    galleryImages: allFile(
+      filter: {
+        sourceInstanceName: { eq: "showImages" }
+        relativeDirectory: { eq: "ebb" }
+      }
+    ) {
       edges {
         node {
           id

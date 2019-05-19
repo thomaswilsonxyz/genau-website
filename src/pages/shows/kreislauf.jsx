@@ -6,7 +6,7 @@ export const query = graphql`
   query KreislaufPageQuery {
     headerImage: allFile(
       filter: {
-        relativeDirectory: { eq: "trilogy" }
+        sourceInstanceName: { eq: "trilogy" }
         name: { eq: "kreislauf" }
       }
     ) {
@@ -21,7 +21,10 @@ export const query = graphql`
       }
     }
     galleryImages: allFile(
-      filter: { relativeDirectory: { eq: "shows/kreislauf" } }
+      filter: {
+        sourceInstanceName: { eq: "showImages" }
+        relativeDirectory: { eq: "kreislauf" }
+      }
     ) {
       edges {
         node {
@@ -45,14 +48,16 @@ export const query = graphql`
   }
 `
 
-export default ({ data }) => (
-  <ShowLayout
-    title={data.showHtml.frontmatter.title}
-    date={data.showHtml.frontmatter.date}
-    location={data.showHtml.frontmatter.location}
-    headerImage={data.headerImage}
-    headerImageClass="kreislauf-header"
-    galleryImageNodes={data.galleryImages.edges}
-    bodyHtml={data.showHtml.html}
-  />
-)
+export default ({ data }) => {
+  return (
+    <ShowLayout
+      title={data.showHtml.frontmatter.title}
+      date={data.showHtml.frontmatter.date}
+      location={data.showHtml.frontmatter.location}
+      headerImage={data.headerImage}
+      headerImageClass="kreislauf-header"
+      galleryImageNodes={data.galleryImages.edges}
+      bodyHtml={data.showHtml.html}
+    />
+  )
+}

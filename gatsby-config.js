@@ -11,18 +11,19 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     // Load all images from file system
     // this is necessary to use any images, which are treated by sharpr
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `showTexts`,
         path: `${__dirname}/src/data/showTexts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `home`,
+        path: `${__dirname}/src/images/home`,
       },
     },
     {
@@ -40,12 +41,41 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "showImages",
+        path: `${__dirname}/src/images/shows`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "blogPostHeaderImages",
+        path: `${__dirname}/src/images/blog/header-images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "blogPosts",
+        path: `${__dirname}/src/data/blog-posts`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         name: `trilogy`,
         path: `${__dirname}/src/images/trilogy`,
       },
     },
+    {
+      resolve: "gatsby-plugin-sharp",
+      options: {
+        name: "blog",
+        path: `${__dirname}/src/images/blog`,
+      },
+    },
+
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -57,13 +87,26 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         name: `shows`,
-        path: `${__dirname}/src/images/shows/**`,
+        path: `${__dirname}/src/images/shows`,
       },
     },
 
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 700,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

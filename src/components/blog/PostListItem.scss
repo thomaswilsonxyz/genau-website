@@ -1,0 +1,73 @@
+@import "../../styles/styles.scss";
+
+.post--li {
+  list-style: none;
+  @media (min-width: 0px) {
+    width: 95%;
+  }
+
+  @media (min-width: 700px) {
+    width: 700px;
+  }
+}
+.post {
+  display: flex;
+  flex-flow: row;
+  min-height: 140px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid $purple;
+}
+
+.post__image {
+  width: 125px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  margin-right: 3 * $basepx;
+}
+
+$post-header-padding: 3 * $basepx;
+.post__text {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding-top: $post-header-padding;
+  padding-left: $post-header-padding;
+  padding-right: $post-header-padding;
+}
+
+.post__text__header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+
+.post__text__header__title {
+  font-size: $font-size-subheading;
+  font-family: $serif;
+}
+
+.post__text__header__date {
+  font-family: $sansserif;
+  color: $grey03;
+  font-size: $font-size-body;
+  padding-left: 2 * $basepx;
+  text-align: right;
+}
+
+.post__text__author {
+  font-family: $sansserif;
+  font-size: $font-size-body;
+  padding-bottom: 1 * $basepx;
+  color: $grey03;
+}
+
+.post__text__preview {
+  display: flex;
+  align-content: center;
+  font-size: $font-size-body;
+  color: black;
+  height: 100%;
+}

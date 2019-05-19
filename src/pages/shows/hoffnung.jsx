@@ -6,7 +6,10 @@ import ShowLayout from "../../components/show/showLayout"
 export const pageData = graphql`
   query HoffnungPageQuery {
     headerImage: allFile(
-      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "hoffnung" } }
+      filter: {
+        sourceInstanceName: { eq: "trilogy" }
+        name: { eq: "hoffnung" }
+      }
     ) {
       edges {
         node {
@@ -19,7 +22,10 @@ export const pageData = graphql`
       }
     }
     galleryImages: allFile(
-      filter: { relativeDirectory: { eq: "shows/hoffnung" } }
+      filter: {
+        sourceInstanceName: { eq: "showImages" }
+        relativeDirectory: { eq: "hoffnung" }
+      }
     ) {
       edges {
         node {

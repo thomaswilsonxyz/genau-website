@@ -1,0 +1,71 @@
+@import "../../styles/styles";
+
+.post-header {
+  padding-top: 3 * $basepx;
+  padding-bottom: 3 * $basepx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+$imgheight: 150px;
+$imgwidth: 150px;
+
+.post-header__post {
+  width: 700px;
+  display: grid;
+  grid-template-columns: $imgwidth auto;
+}
+
+.post-header__post__image {
+  display: flex;
+  height: $imgheight;
+  width: $imgwidth;
+}
+
+.post-header__post__image__img {
+  height: $imgheight;
+  width: $imgwidth;
+  border-radius: 50%;
+}
+
+.post-header__post__text {
+  padding-left: 4 * $basepx;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.post-header__post__text__title {
+  font-family: $serif;
+  font-size: $font-size-heading;
+  color: $black;
+}
+
+.post-header__post__text__author {
+  font-family: $sansserif;
+  color: $purple;
+  font-size: $font-size-subheading;
+}
+
+.post-header__post__text__date {
+  font-family: $sansserif;
+  color: $purple;
+  font-size: $font-size-subheading;
+}
+
+.blog-post {
+  font-family: $sansserif;
+  font-size: $font-size-body;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 4 * $basepx;
+}
+
+.blog-post__content {
+  width: 70ch;
+  font-family: $sansserif;
+  font-size: $font-size-body;
+}

@@ -3,8 +3,13 @@ $sansserif: "Nunito";
 
 $basepx: 5px;
 
+$font-size-body: 16px;
+$font-size-subheading: 20px;
+$font-size-heading: 24px;
+
 $black: #22292f;
 $grey02: #f5f5f5;
+$grey03: #c4c4c4;
 $red: #af0404;
 $purple: #424874;
 
@@ -14,3 +19,16 @@ $bp-lg: 1000px;
 
 $content-width: 500px;
 $trilogy-tile-height: 250px;
+
+main {
+  min-height: calc(100vh - 150px); // fits header and footer
+}
+
+@mixin bp-max-flex-center($bp) {
+  @media (max-width: $bp) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

@@ -1,16 +1,14 @@
 import React from "react"
-import Proptypes from "prop-types"
+import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
 import "./CompanyMember.scss"
-import { getMemberDetails } from "../../data/members"
 
-const CompanyMember = ({ fileName, childImageSharp }) => {
-  const { name, role } = getMemberDetails(fileName)
+const CompanyMember = ({ name, role, childImageSharp }) => {
   return (
     <div className="member">
       <Img
-        fluid={childImageSharp.fluid}
+        fluid={childImageSharp.fixed}
         className="member__image"
         alt="headshot"
       />
@@ -21,8 +19,9 @@ const CompanyMember = ({ fileName, childImageSharp }) => {
 }
 
 CompanyMember.propTypes = {
-  fileName: Proptypes.string.isRequired,
-  childImageSharp: Proptypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  childImageSharp: PropTypes.object.isRequired,
 }
 
 export default CompanyMember

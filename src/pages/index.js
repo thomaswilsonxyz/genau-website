@@ -7,13 +7,13 @@ import SocialMediaPlatform from "../components/SocialMediaPlatform"
 import { CompanyMembers, SEO } from "../components"
 import TrilogyTile from "../components/TrilogyTile"
 import { graphql } from "gatsby"
+import { collaborators, dancers } from "../data/members"
 
 import "./index.scss"
 
 const iconSize = 40
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <React.Fragment>
@@ -94,15 +94,31 @@ const IndexPage = ({ data }) => {
         <section>
           <div className="section-header">
             <div className="section-header__wrapper">
+              <h2 className="section-header__wrapper__text">Our Performers</h2>
+              <div className="section-header__wrapper__background" />
+            </div>
+          </div>
+
+          <div className="headshots-wrapper">
+            <CompanyMembers members={dancers} headshots={data.headshots} />
+          </div>
+        </section>
+
+        <section>
+          <div className="section-header">
+            <div className="section-header__wrapper">
               <h2 className="section-header__wrapper__text">
-                Meet the Performers
+                Our Collaborators
               </h2>
               <div className="section-header__wrapper__background" />
             </div>
           </div>
 
           <div className="headshots-wrapper">
-            <CompanyMembers />
+            <CompanyMembers
+              members={collaborators}
+              headshots={data.headshots}
+            />
           </div>
         </section>
       </React.Fragment>
@@ -125,7 +141,7 @@ export const indexPageQuery = graphql`
       }
     }
     ebbImage: allFile(
-      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "ebb" } }
+      filter: { sourceInstanceName: { eq: "trilogy" }, name: { eq: "ebb" } }
     ) {
       edges {
         node {
@@ -140,7 +156,7 @@ export const indexPageQuery = graphql`
     }
     kreislaufImage: allFile(
       filter: {
-        relativeDirectory: { eq: "trilogy" }
+        sourceInstanceName: { eq: "trilogy" }
         name: { eq: "kreislauf" }
       }
     ) {
@@ -156,7 +172,10 @@ export const indexPageQuery = graphql`
       }
     }
     hoffnungImage: allFile(
-      filter: { relativeDirectory: { eq: "trilogy" }, name: { eq: "hoffnung" } }
+      filter: {
+        sourceInstanceName: { eq: "trilogy" }
+        name: { eq: "hoffnung" }
+      }
     ) {
       edges {
         node {
@@ -164,6 +183,18 @@ export const indexPageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 200, maxHeight: 200) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    headshots: allFile(filter: { sourceInstanceName: { eq: "headshots" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fixed(height: 150, width: 150, grayscale: true) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

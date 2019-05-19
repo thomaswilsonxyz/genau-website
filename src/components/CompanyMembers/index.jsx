@@ -1,48 +1,42 @@
 import React from "react"
 import CompanyMember from "./CompanyMember"
-import { StaticQuery, graphql } from "gatsby"
+import PropTypes from "prop-types"
 
 import "./index.scss"
 
-const imagesQuery = graphql`
-  query {
-    allFile(filter: { relativeDirectory: { eq: "headshots" } }) {
-      edges {
-        node {
-          id
-          name
-          childImageSharp {
-            id
-            fluid(maxWidth: 150, maxHeight: 150, grayscale: true) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+const getImageFixedForHeadshot = (fileName, edges) =>
+  edges
+    .filter(({ node }) => node.name === fileName)
+    .map(({ node }) => node.childImageSharp)[0]
 
-const CompanyMembers = () => (
-  <StaticQuery
-    query={imagesQuery}
-    render={data => {
-      return (
-        <div className="headshots">
-          {data.allFile.edges.map(({ node }) => {
-            const { id, name, childImageSharp } = node
-            return (
-              <CompanyMember
-                key={id}
-                fileName={name}
-                childImageSharp={childImageSharp}
-              />
-            )
-          })}
-        </div>
-      )
-    }}
-  />
-)
+const CompanyMembers = ({ members, headshots }) => {
+  const { edges } = headshots
+
+  return (
+    <div className="headshots">
+      {members.map(({ name, role, fileName }) => {
+        return (
+          <CompanyMember
+            key={name}
+            name={name}
+            role={role}
+            childImageSharp={getImageFixedForHeadshot(fileName, edges)}
+          />
+        )
+      })}
+    </div>
+  )
+}
+
+CompanyMembers.propTypes = {
+  members: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      role: PropTypes.string.isRequired,
+      fileName: PropTypes.string.isRequired,
+    })
+  ),
+  headshots: PropTypes.object.isRequired,
+}
 
 export default CompanyMembers
