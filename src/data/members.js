@@ -1,33 +1,8 @@
-const members = [
-  {
-    name: "Maika Klaukien",
-    role: "Director",
-    fileName: "maika",
-  },
-  {
-    name: "Thomas Wilson",
-    role: "Producer & Dancer",
-    fileName: "thomas",
-  },
+export const dancers = [
   {
     name: "Akane Abe",
     role: "Dancer & Choreographer",
     fileName: "akane",
-  },
-  {
-    name: "Carla Gonclaves",
-    role: "Dancer & Rehearsal Director",
-    fileName: "carla",
-  },
-  {
-    name: "Davide",
-    role: "Dancer",
-    fileName: "davide",
-  },
-  {
-    name: "Rina Wako",
-    role: "Dancer",
-    fileName: "rina",
   },
   {
     name: "Maaya Agame",
@@ -35,14 +10,42 @@ const members = [
     fileName: "maaya",
   },
   {
+    name: "Davide Camorani",
+    role: "Dancer",
+    fileName: "davide",
+  },
+  {
+    name: "Carla Gonçlaves",
+    role: "Dancer & Rehearsal Director",
+    fileName: "carla",
+  },
+  {
+    name: "Maika Klaukien",
+    role: "Director",
+    fileName: "maika",
+  },
+  {
     name: "Pauline Schwartz",
     role: "Dancer",
     fileName: "pauline",
   },
   {
-    name: "Sam",
-    role: "Lighting Designer",
-    fileName: "sam",
+    name: "Rina Wako",
+    role: "Dancer",
+    fileName: "rina",
+  },
+  {
+    name: "Thomas Wilson",
+    role: "Producer & Dancer",
+    fileName: "thomas",
+  },
+]
+
+export const collaborators = [
+  {
+    name: "Lynne Gentle",
+    role: "Musician",
+    fileName: "lynne",
   },
   {
     name: "Michael Haslam",
@@ -50,17 +53,13 @@ const members = [
     fileName: "michael",
   },
   {
-    name: "Lynne Gentle",
-    role: "Musician",
-    fileName: "lynne",
+    name: "Jonathan Samuels",
+    role: "Lighting Designer",
+    fileName: "sam",
   },
   {
-    name: "So",
+    name: "So Takao",
     role: "Musician",
     fileName: "so",
   },
 ]
-
-export const getMemberDetails = fileName =>
-  members.filter(m => m.fileName === fileName)[0]
-export default members

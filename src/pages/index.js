@@ -7,6 +7,7 @@ import SocialMediaPlatform from "../components/SocialMediaPlatform"
 import { CompanyMembers, SEO } from "../components"
 import TrilogyTile from "../components/TrilogyTile"
 import { graphql } from "gatsby"
+import { collaborators, dancers } from "../data/members"
 
 import "./index.scss"
 
@@ -93,15 +94,31 @@ const IndexPage = ({ data }) => {
         <section>
           <div className="section-header">
             <div className="section-header__wrapper">
+              <h2 className="section-header__wrapper__text">Our Performers</h2>
+              <div className="section-header__wrapper__background" />
+            </div>
+          </div>
+
+          <div className="headshots-wrapper">
+            <CompanyMembers members={dancers} headshots={data.headshots} />
+          </div>
+        </section>
+
+        <section>
+          <div className="section-header">
+            <div className="section-header__wrapper">
               <h2 className="section-header__wrapper__text">
-                Meet the Performers
+                Our Collaborators
               </h2>
               <div className="section-header__wrapper__background" />
             </div>
           </div>
 
           <div className="headshots-wrapper">
-            <CompanyMembers />
+            <CompanyMembers
+              members={collaborators}
+              headshots={data.headshots}
+            />
           </div>
         </section>
       </React.Fragment>
@@ -166,6 +183,18 @@ export const indexPageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 200, maxHeight: 200) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    headshots: allFile(filter: { sourceInstanceName: { eq: "headshots" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fixed(height: 150, width: 150, grayscale: true) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

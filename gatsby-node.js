@@ -3,7 +3,7 @@ const path = require(`path`)
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve(
-    `${__dirname}/src/components/blog/BlogPostTemplate.jsx`
+    `${__dirname}/src/components/blog/BlogPostTemplateWithPageContext.jsx`
   )
   return graphql(`
     {
@@ -17,7 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             name
             childImageSharp {
-              fixed(width: 125, height: 150) {
+              fixed(width: 150, height: 150) {
                 base64
                 tracedSVG
                 aspectRatio
@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             name
             childImageSharp {
-              fixed(width: 200, height: 200) {
+              fixed(width: 150, height: 150) {
                 base64
                 tracedSVG
                 aspectRatio
