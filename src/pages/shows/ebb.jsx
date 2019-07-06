@@ -53,5 +53,6 @@ export default ({ data }) => (
     headerImageClass="ebb-header"
     bodyHtml={data.showHtml.html}
     galleryImageNodes={data.galleryImages.edges}
+    vimeoUrls={[]}
   />
 )

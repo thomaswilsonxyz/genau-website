@@ -12,21 +12,49 @@ const getHeaderFluid = headerImage =>
 const ImageGallery = ({ imageNodes }) => {
   return (
     <div className="image-gallery">
-      <div className="image-gallery__container">
-        {imageNodes.map(({ node }) => {
-          const { id, childImageSharp } = node
-          return (
-            <Img
-              key={id}
-              className="image-gallery__image"
-              fixed={childImageSharp.fixed}
-              style={{ height: 195 }}
-            />
-          )
-        })}
-      </div>
+      {imageNodes.map(({ node }) => {
+        const { id, childImageSharp } = node
+        return (
+          <Img
+            key={id}
+            className="image-gallery__image"
+            fixed={childImageSharp.fixed}
+            style={{ height: 195 }}
+          />
+        )
+      })}
     </div>
   )
+}
+
+const VideoGallery = ({ vimeoUrls }) => {
+  const parentRef = React.useRef()
+  const [width, setWidth] = React.useState(100)
+  const [height, setHeight] = React.useState(100)
+  React.useEffect(() => {
+    setWidth(parentRef.current.offsetWidth)
+    setHeight(parentRef.current.clientHeight)
+  }, [])
+  return (
+    <div className="video-gallery">
+      {vimeoUrls.map(url => (
+        <div key={url} className="video-gallery__video" ref={parentRef}>
+          <iframe
+            src={url}
+            width={width.toString()}
+            height={height.toString()}
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+VideoGallery.propTypes = {
+  vimeoUrls: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 ImageGallery.propTypes = {
@@ -40,6 +68,7 @@ const ShowLayout = ({
   headerImage,
   headerImageClass,
   galleryImageNodes,
+  vimeoUrls,
   bodyHtml,
 }) => (
   <Layout>
@@ -76,7 +105,12 @@ const ShowLayout = ({
         dangerouslySetInnerHTML={{ __html: bodyHtml }}
       />
     </section>
-    <section>
+    {vimeoUrls.length > 0 && (
+      <section className="gallery-container">
+        <VideoGallery vimeoUrls={vimeoUrls} />
+      </section>
+    )}
+    <section className="gallery-container">
       <ImageGallery imageNodes={galleryImageNodes} />
     </section>
   </Layout>
@@ -90,6 +124,7 @@ ShowLayout.propTypes = {
   headerImageClass: PropTypes.string.isRequired,
   bodyText: PropTypes.element.isRequired,
   galleryImageNodes: PropTypes.array.isRequired,
+  vimeoUrls: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default ShowLayout

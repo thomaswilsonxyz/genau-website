@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import ShowLayout from "../../components/show/showLayout"
@@ -49,14 +50,23 @@ export const pageData = graphql`
   }
 `
 
-export default ({ data }) => (
-  <ShowLayout
-    headerImage={data.headerImage}
-    headerImageClass="hoffnung-header"
-    bodyHtml={data.showHtml.html}
-    date={data.showHtml.frontmatter.date}
-    title={data.showHtml.frontmatter.title}
-    location={data.showHtml.frontmatter.location}
-    galleryImageNodes={[]}
-  />
-)
+function Hoffnung({ data }) {
+  return (
+    <ShowLayout
+      headerImage={data.headerImage}
+      headerImageClass="hoffnung-header"
+      bodyHtml={data.showHtml.html}
+      date={data.showHtml.frontmatter.date}
+      title={data.showHtml.frontmatter.title}
+      location={data.showHtml.frontmatter.location}
+      galleryImageNodes={[]}
+      vimeoUrls={[]}
+    />
+  )
+}
+
+Hoffnung.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default Hoffnung

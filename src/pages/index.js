@@ -38,7 +38,7 @@ const IndexPage = ({ data }) => {
         <div className="strapline">
           <p className="strapline__text">
             We are a contemporary dance theatre company based in London,
-            England. We are currently creating a trilogy about resilience
+            England. We are currently creating a trilogy about resilience.
           </p>
           <div className="strapline__after" />
         </div>

@@ -6,16 +6,16 @@ date: "November 2017"
 
 Ebb & Flood was the first piece in the resilience trilogy. It explored the rhythm of flow: waves, impact, motion, response, undertow, and return. We drew on the German translation of the word Resilience _Elastizität_ - Elasticity.
 
-The piece was seen as a commentary, and exploration, of the way we livein our time. We live the interplay between power and vulnerability, a dance of the weak and the strong. Every action is met by an equal and opposite reaction. Each event generates an even stronger backlash. Turns in unexpected and different directions cascade and ricochet, pulled and pushed by random elasticity. All around is surprise, unpredictability, shock.
+The piece was seen as a commentary, and exploration, of the way we live in our time. We live the interplay between power and vulnerability, a dance of the weak and the strong. Every action is met by an equal and opposite reaction. Each event generates an even stronger backlash. Turns in unexpected and different directions cascade and ricochet, pulled and pushed by random elasticity. All around is surprise, unpredictability, shock.
 
-The piece purposefully saught to evoke emotions, provoke thought, and and immerse the audience in the creative elasticity, and inexorable Ebb and Flow of own lives outside of the performance space.
+The piece purposefully sought to evoke emotions, provoke thought, and immerse the audience in the creative elasticity, and inexorable Ebb and Flow of our own lives outside of the performance space.
 
 ## St. Leonard's Church
 
-Situated in East London, St Leonard’s Church ([link](https://www.shoreditchchurch.org.uk/)) is
+Situated in East London, [St. Leonard's Church](https://www.shoreditchchurch.org.uk/) is
 dedicated to St Leonard, the patron saint of prisoners and those who are mentally ill. There has been a church on the site for many centuries.
 
-The site became the actors’ church. The nearby New Inn Yard hosted the initial performances of several of Shakespeare’s plays Many of the Elizabethan theatrical fraternity are buried in the medieval church under the crypt. This includes three Burbages:{" "} <strong>James Burbage</strong> who built the first English theatre; his son, <strong>Cuthbert</strong>who built the Globe theatre; and his other son, /<strong>Richard</strong>, who was the first to play Macbeth, Hamlet, Richard 3rd, Othello, and Romeo. So the first Romeo is buried in the crypt where Shakespeare placed the final scene of his tragic play.
+The site became the actors’ church. The nearby New Inn Yard hosted the initial performances of several of Shakespeare’s plays. Many of the Elizabethan theatrical fraternity are buried in the medieval church under the crypt. This includes three Burbages: **James Burbage** who built the first English theatre; his son, **Cuthbert** who built the Globe theatre; and his other son, **Richard**, who was the first to play Macbeth, Hamlet, Richard 3rd, Othello, and Romeo. So the first Romeo is buried in the crypt where Shakespeare placed the final scene of his tragic play.
 
 The church has always been committed to its community, particularly those who live on the streets that often have difficulties with alcohol or substance abuse. The church built Acorn House, an 18 bed alcohol rehabilitation centre which is run by the Spitalfields Crypt Trust.
 

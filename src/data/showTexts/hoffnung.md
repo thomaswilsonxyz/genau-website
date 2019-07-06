@@ -4,4 +4,5 @@ location: "Location TBC"
 date: "Spring 2020"
 ---
 
-Hoffnung is currently in active development by genau dance co. The piece will explore resilience through the ideas of home, hope, belonging, place. The piece is being created as an urgent response to some of the biggest, social problems of our times: immigration, homelessness,
+Hoffnung is currently in the stage of pre-production: the team are researching, talking, and thinking a lot about the core themes which will be involved. At the heart of the piece is the notion of hope, which is incidentally the English translation of the title.
+

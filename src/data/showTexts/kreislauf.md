@@ -38,4 +38,4 @@ A great thank you to Dave Wybrow for giving us the opportunity to perform at the
 
 Andrew McGonigle, Charles Abbott, Henriette Brorson, Herbert Lui, Kaori Whiting, Mencia Scott and Oscar Veillard.
 
-Dorothy Judd, Julia Paton and Gwyneth Williams; and last bit not least, Lynne Gentle who in moment of great crises helped to keep Kreislauf laufen.
+Dorothy Judd, Julia Paton and Gwyneth Williams; and last bit not least, Lynne Gentle who, in moment of great crisis, helped to keep Kreislauf laufen.

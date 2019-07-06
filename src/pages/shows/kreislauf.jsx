@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from "prop-types"
+
 import ShowLayout from "../../components/show/showLayout"
 import { graphql } from "gatsby"
 
@@ -48,7 +50,7 @@ export const query = graphql`
   }
 `
 
-export default ({ data }) => {
+function Kreislauf({ data }) {
   return (
     <ShowLayout
       title={data.showHtml.frontmatter.title}
@@ -58,6 +60,13 @@ export default ({ data }) => {
       headerImageClass="kreislauf-header"
       galleryImageNodes={data.galleryImages.edges}
       bodyHtml={data.showHtml.html}
+      vimeoUrls={["https://player.vimeo.com/video/345326075"]}
     />
   )
 }
+
+Kreislauf.propTypes = {
+  data: PropTypes.object.isRequired,
+}
+
+export default Kreislauf
