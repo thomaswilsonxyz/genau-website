@@ -1,4 +1,6 @@
 .footer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   min-height: 50px;
   background-color: white;
   display: flex;
@@ -7,8 +9,18 @@
   bottom: 0;
   width: 100%;
   padding-top: 50px;
-}
+  padding: 20px 0;
+  background-color: #efefef;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  .copyright {
+  }
 
-.footer__text {
-  max-width: 600px;
+  .author {
+    a {
+      color: #e46a07;
+    }
+  }
 }

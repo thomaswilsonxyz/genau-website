@@ -7,7 +7,7 @@ const SocialMediaPlatform = ({ name, handle, icon, url }) => (
   <div className="platform" id={name}>
     <div className="platform-details__icon">{icon}</div>
     <div className="platform-details">
-      <div>
+      <div className="platform__text">
         <h3 className="platform-details__name">{name}</h3>
         <a href={url} className="platform-details__handle">
           {handle}

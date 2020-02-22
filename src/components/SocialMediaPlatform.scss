@@ -2,6 +2,10 @@
 
 .platform {
   height: auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .platform-details {
@@ -9,6 +13,11 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+}
+
+.platform__text {
+  display: flex;
+  flex-flow: column;
 }
 
 .platform-details__icon {

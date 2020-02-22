@@ -1,6 +1,7 @@
 import React from "react"
 import { Instagram, Twitter, BookOpen } from "react-feather"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SocialMediaPlatform from "../components/SocialMediaPlatform"
@@ -38,8 +39,30 @@ const IndexPage = ({ data }) => {
         <div className="strapline">
           <p className="strapline__text">
             We are a contemporary dance theatre company based in London,
-            England. We are currently creating a trilogy about resilience.
+            England. We are currently creating{" "}
+            <Link to="/hoffnung">Hoffnung</Link>, the final piece in our trilogy
+            about resilience.
           </p>
+          <div className="strapline__socials">
+            {/* <SocialMediaPlatform
+              name="Twitter"
+              icon={<Twitter size={iconSize} />}
+              handle="@genaudanceco"
+              url="https://www.twitter.com/genaudanceco"
+            /> */}
+            <SocialMediaPlatform
+              name="Follow us on Instagram"
+              icon={<Instagram size={iconSize} />}
+              handle="@genaudanceco"
+              url="https://www.instagram.com/genaudanceco"
+            />
+            {/* <SocialMediaPlatform
+              name="Blog"
+              icon={<BookOpen size={iconSize} />}
+              handle="Visit Blog"
+              url="/blog"
+            /> */}
+          </div>
           <div className="strapline__after" />
         </div>
         <section className="trilogy">
@@ -59,38 +82,10 @@ const IndexPage = ({ data }) => {
             name="Hoffnung"
             date="2020"
             imageFluid={data.hoffnungImage.edges[0].node.childImageSharp.fluid}
-            linkUrl="/shows/hoffnung"
+            linkUrl="/hoffnung"
           />
         </section>
-        <section className="social-media">
-          <div className="section-header">
-            <div className="section-header__wrapper">
-              <h2 className="section-header__wrapper__text">Stay in Touch</h2>
-              <div className="section-header__wrapper__background" />
-            </div>
-          </div>
 
-          <div className="social-media__platforms">
-            <SocialMediaPlatform
-              name="Twitter"
-              icon={<Twitter size={iconSize} />}
-              handle="@genaudanceco"
-              url="https://www.twitter.com/genaudanceco"
-            />
-            <SocialMediaPlatform
-              name="Instagram"
-              icon={<Instagram size={iconSize} />}
-              handle="@genaudanceco"
-              url="https://www.instagram.com/genaudanceco"
-            />
-            <SocialMediaPlatform
-              name="Blog"
-              icon={<BookOpen size={iconSize} />}
-              handle="Visit Blog"
-              url="/blog"
-            />
-          </div>
-        </section>
         <section>
           <div className="section-header">
             <div className="section-header__wrapper">
