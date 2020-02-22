@@ -17,18 +17,17 @@ const iconSize = 40
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <React.Fragment>
+      <>
         <SEO title="Home" keywords={[`genau`, `dance`, `company`]} />
-        {JSON.stringify}
         <Img
           alt="the genau dancers"
           className="home-page-header"
           style={{
-            height: 200,
+            height: 300,
           }}
           imgStyle={{
             width: "100%",
-            height: 300,
+            height: 500,
             marginBottom: 0,
             paddingBottom: 0,
             backgroundSize: "cover",
@@ -116,7 +115,7 @@ const IndexPage = ({ data }) => {
             />
           </div>
         </section>
-      </React.Fragment>
+      </>
     </Layout>
   )
 }
