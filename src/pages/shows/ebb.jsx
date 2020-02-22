@@ -1,5 +1,6 @@
 import React from "react"
 import { ShowLayout } from "../../components"
+import { graphql } from "gatsby"
 
 export const query = graphql`
   query EbbPageQuery {

@@ -1,9 +1,9 @@
 {
   "name": "genau",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Genau dance co's web page",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Thomas Wilson",
   "dependencies": {
     "gatsby": "^2.2.5",
     "gatsby-background-image": "^0.4.1",
@@ -21,10 +21,11 @@
     "intersection-observer": "^0.6.0",
     "node-sass": "4.11.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-feather": "1.1.6",
     "react-helmet": "^5.2.0",
+    "react-particles-js": "^2.7.0",
     "styled-components": "4.2.0",
     "tailwindcss": "0.7.4"
   },

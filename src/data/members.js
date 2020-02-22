@@ -20,8 +20,13 @@ export const dancers = [
     fileName: "carla",
   },
   {
+    name: "Alana Heath",
+    role: "Dancer",
+    fileName: "alana",
+  },
+  {
     name: "Maika Klaukien",
-    role: "Director",
+    role: "Artistic Director",
     fileName: "maika",
   },
   {
@@ -54,7 +59,7 @@ export const collaborators = [
   },
   {
     name: "Jonathan Samuels",
-    role: "Lighting Designer",
+    role: "Visual Designer",
     fileName: "sam",
   },
   {
